@@ -1,8 +1,1 @@
-print "hello"
-111
-222
-333
-444
-fafafdffds
-
-5555
+print "hello world"
