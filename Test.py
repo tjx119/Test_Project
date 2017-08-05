@@ -7,5 +7,3 @@ csv_path = 'e:/Test_Data/2017_08_05-10_40_13.csv'
 
 sales = pd.read_csv(csv_path, encoding='GBK', skiprows=9, skipfooter=1)
 print sales.head()
-
-print sales.sort_values(u'销售数量')
