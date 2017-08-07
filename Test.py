@@ -1,12 +1,13 @@
 #!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
 import pandas as pd
-from pandas import DataFrame, Series
 
-csv_path = 'e:/Test_Data/2017_08_05-10_40_13.csv'
+a = 5
 
+<<<<<<< HEAD
 sales = pd.read_csv(csv_path, encoding='GBK', skiprows=9, skipfooter=1)
 print sales.head()
+=======
 class func(object):
 
     def __init__(self):
@@ -19,3 +20,4 @@ class func(object):
 
 f = func()
 print f.add()
+>>>>>>> 2a77d3d492ab0e44330a38fe2f74025e49091901
