@@ -2,21 +2,32 @@
 # -*- coding: UTF-8 -*-
 
 a = 5
+class Fjs(object):
+    def __init__(self, name):
+        self.name = name
 
-<<<<<<< HEAD
-sales = pd.read_csv(csv_path, encoding='GBK', skiprows=9, skipfooter=1)
-print sales.head()
-=======
-class func(object):
-
-    def __init__(self):
-        pass
-
-    def add(self):
-        a = 6
-        return a + 3
+    def hello(self):
+        print "said by : ", self.name
+        print a
+    def fjs(self, name):
+        if name == self.name:
+            print "yes"
+        else:
+            print "no"
 
 
-f = func()
-print f.add()
->>>>>>> 2a77d3d492ab0e44330a38fe2f74025e49091901
+class Wrap_Fjs(object):
+    def __init__(self, fjs):
+        self._fjs = fjs
+
+    def __getattr__(self, item):
+        if item == "hello":
+            print "调用hello方法了"
+        elif item == "fjs":
+            print "调用fjs方法了"
+        return getattr(self._fjs, item)
+
+
+fjs = Wrap_Fjs(Fjs("fjs"))
+fjs.hello()
+fjs.fjs("fjs")
