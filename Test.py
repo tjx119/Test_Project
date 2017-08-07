@@ -1,6 +1,5 @@
 #!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
-import pandas as pd
 
 a = 5
 
