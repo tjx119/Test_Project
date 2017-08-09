@@ -1,12 +1,14 @@
 # -*- coding: UTF-8 -*-
-
+import flask
 from flask import Flask, request
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Hello Web!"
+def index():
+    """ 显示可在 '/' 访问的 index 页面
+    """
+    return flask.render_template('index.html')
 
 @app.route('/user/<username>')
 def show_user_profile(username):
@@ -29,7 +31,7 @@ def about():
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a, b):
     return "%d + %d = %d" % (a, b, a + b)
-
+'''
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     error = None
@@ -41,6 +43,6 @@ def login():
             error = 'Invalid username/password'
     # 当请求形式为“GET”或者认证失败则执行以下代码
     return render_template('login.html', error=error)
-
+'''
 if __name__ == "__main__":
     app.run(debug = True)
