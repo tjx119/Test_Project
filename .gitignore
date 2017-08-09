@@ -13,3 +13,8 @@ Notebook/.ipynb_checkpoints/Test-checkpoint.ipynb
 *.xml
 .idea/modules.xml
 *.xml
+*.xml
+*.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/Test_Project.iml
