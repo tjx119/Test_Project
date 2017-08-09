@@ -5,3 +5,11 @@ Notebook/.ipynb_checkpoints/MyNote-checkpoint.ipynb
 Notebook/.ipynb_checkpoints/Pandas_Practice-checkpoint.ipynb
 Notebook/.ipynb_checkpoints/Python-Basic-checkpoint.ipynb
 Notebook/.ipynb_checkpoints/Python-DesignPattern-checkpoint.ipynb
+Notebook/.ipynb_checkpoints/Test-checkpoint.ipynb
+*.xml
+.idea/Test_Project.iml
+*.xml
+.idea/misc.xml
+*.xml
+.idea/modules.xml
+*.xml
