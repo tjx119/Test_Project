@@ -1,13 +1,14 @@
 # -*- coding: UTF-8 -*-
-#导入模块
 from __future__ import with_statement
+
+#导入模块
 from contextlib import closing
 import flask
 import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 
 # 配置文件
-DATABASE = '/tmp/flaskr.db'
+DATABASE = '/tmp/webflask.db'
 DEBUG = True
 SECRET_KEY = 'development key'
 USERNAME = 'admin'
@@ -15,7 +16,8 @@ PASSWORD = 'default'
 
 #创建应用
 app = Flask(__name__)
-app.config.from_envvar('WEBFLASK_SETTING', silent=True)
+#app.config.from_pyfile('setting.py')
+app.config.from_object(__name__)
 
 def connect_db():
     return sqlite3.connect(app.config['DATABASE'])
@@ -69,4 +71,5 @@ def login():
 '''
 
 if __name__ == "__main__":
-    app.run(debug = True)
+#    app.run(debug = True)
+    init_db()

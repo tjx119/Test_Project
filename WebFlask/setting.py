@@ -1,3 +1,4 @@
+#setting.py
 # 配置文件
 DATABASE = '/tmp/WebFlask.db'
 DEBUG = True
