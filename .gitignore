@@ -24,3 +24,5 @@ Notebook/.ipynb_checkpoints/Test-checkpoint.ipynb
 .idea/misc.xml
 .idea/Test_Project.iml
 .idea/workspace.xml
+.idea/misc.xml
+*.pyc

@@ -1,9 +1,32 @@
 # -*- coding: UTF-8 -*-
+#导入模块
+from __future__ import with_statement
+from contextlib import closing
 import flask
-from flask import Flask, request
+import sqlite3
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 
+# 配置文件
+DATABASE = '/tmp/flaskr.db'
+DEBUG = True
+SECRET_KEY = 'development key'
+USERNAME = 'admin'
+PASSWORD = 'default'
+
+#创建应用
 app = Flask(__name__)
+app.config.from_envvar('WEBFLASK_SETTING', silent=True)
 
+def connect_db():
+    return sqlite3.connect(app.config['DATABASE'])
+
+def init_db():
+    with closing(connect_db()) as db:
+        with app.open_resource('schema.sql') as f:
+            db.cursor().executescript(f.read())
+        db.commit()
+
+'''
 @app.route('/')
 def index():
     """ 显示可在 '/' 访问的 index 页面
@@ -31,7 +54,7 @@ def about():
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a, b):
     return "%d + %d = %d" % (a, b, a + b)
-'''
+
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     error = None
@@ -44,5 +67,6 @@ def login():
     # 当请求形式为“GET”或者认证失败则执行以下代码
     return render_template('login.html', error=error)
 '''
+
 if __name__ == "__main__":
     app.run(debug = True)

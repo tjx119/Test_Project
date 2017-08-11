@@ -1,33 +1,13 @@
 #!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
-
-a = 5
-class Fjs(object):
-    def __init__(self, name):
-        self.name = name
-
-    def hello(self):
-        print "said by : ", self.name
-        print a
-    def fjs(self, name):
-        if name == self.name:
-            print "yes"
-        else:
-            print "no"
+import multiprocessing as mul
 
 
-class Wrap_Fjs(object):
-    def __init__(self, fjs):
-        self._fjs = fjs
+def f(x):
+    return x ** 2
 
-    def __getattr__(self, item):
-        if item == "hello":
-            print "调用hello方法了"
-        elif item == "fjs":
-            print "调用fjs方法了"
-        return getattr(self._fjs, item)
+pool = mul.Pool(10)
 
+ref = pool.map(f, [1,2,3,4,5,6,7,8,9,10])
 
-fjs = Wrap_Fjs(Fjs("fjs"))
-fjs.hello()
-fjs.fjs("fjs")
+print ref
