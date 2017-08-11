@@ -20,3 +20,6 @@ Notebook/.ipynb_checkpoints/Test-checkpoint.ipynb
 .idea/Test_Project.iml
 .idea/workspace.xml
 .idea/workspace.xml
+Test.py
+Test.py
+*.pyc
