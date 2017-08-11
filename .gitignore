@@ -24,3 +24,4 @@ Test.py
 Test.py
 *.pyc
 *.xml
+.idea/workspace.xml
