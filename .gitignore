@@ -36,3 +36,5 @@ Test.py
 .idea/workspace.xml
 .idea/Test_Project.iml
 >>>>>>> 2eff8f6efb19ebfa822dd004f8254c86a9c463f7
+*.xml
+*.xml
