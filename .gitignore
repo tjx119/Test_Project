@@ -20,8 +20,19 @@ Notebook/.ipynb_checkpoints/Test-checkpoint.ipynb
 .idea/Test_Project.iml
 .idea/workspace.xml
 .idea/workspace.xml
+<<<<<<< HEAD
 Test.py
 Test.py
 *.pyc
 *.xml
 .idea/workspace.xml
+=======
+.idea/Test_Project.iml
+.idea/misc.xml
+.idea/Test_Project.iml
+.idea/workspace.xml
+.idea/misc.xml
+*.pyc
+.idea/workspace.xml
+.idea/Test_Project.iml
+>>>>>>> 2eff8f6efb19ebfa822dd004f8254c86a9c463f7
